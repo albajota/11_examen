@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baskervville&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style type="text/css">
+        :root{
+            --naranja:#F0A93A;
+            --negro: black;
+            --blanco: white;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-size: 18px;
+            font-family: 'Lato', sans-serif;
+        }
+        img{
+            width: 100%;
+        }
+        a{
+            text-decoration: none;
+        }
+        nav{
+            display: flex;
+            width: 100%;
+            background: white;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1em 2em;
+            position: fixed;
+            justify-content: flex-end;
+            z-index: 1;
+        }
+        nav a{
+            padding: 0 1em;
+            color: var(--naranja);
+        }
+        nav a:hover{
+            border-bottom: 2px solid var(--naranja);
+        }
+        header{
+            width: 100%;
+            padding: 1.5em;
+        }
+        header p{
+            z-index: 3;
+            width: 70%;
+            font-size: 1.2em;
+            color: var(--naranja);
+        }
+        h1{
+            z-index: -2;
+            font-size: 16em;
+            text-align: center;
+            font-family: 'Baskervville', serif;
+            color: var(--naranja);
+        }
+        .container{
+            z-index: -2;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat (2, 1fr);
+            column-gap: 1em;
+            padding: 1em 2em;
+        }
+        main section:first-child{
+            grid-row: span 2;
+        }
+        section{
+            overflow: hidden;
+            position: relative;
+        }
+        .cont_txt{
+            position: absolute;
+            padding: 2.5em 2em;
+            color: var(--blanco);
+            opacity: 0;
+            transition: 1s opacity;
+            width: 100%;
+            height: 100%;
+        }
+        .cont_txt:hover{
+            opacity: 1;
+            background-color: rgba(0,0,0,0.6);
+        }
+        .cont_img{
+            flex-grow: 1;
+        }
+        .cont_img:hover{
+            cursor: grab;
+        }
+        footer{
+            padding: 2em 2em;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        .col_1{
+            width: 50%;
+        }
+        .col_2{
+            width: 50%;
+        }
+</style>
+</head>
+<body>
+    <nav class="navigation">
+        <a href="https://www.dothingsnyc.com/work">Work</a>
+        <a href="https://www.dothingsnyc.com/inspo">Inspo</a>
+        <a href="https://www.dothingsnyc.com/about">About</a>
+    </nav>
+    <header>
+        <p>We are a brand experience design company.  We partner with clients to help them connect with their audiences through outstanding products, experiences, and environments.  We do it through our unique design “with a point of view” approach.  We believe that enriching product experiences with a sense of style always delivers business results.</p>
+        <h1>Dothings</h1>
+    </header>
+    <main class="container">
+        <section class="corcoran">
+            <div class="cont_txt">
+                <p>Corcoran Rebranding</p>
+                <p>The Redefining Touch</p>
+            </div>
+            <div class="cont_img">
+                <img src="img/dothings.jpg">
+            </div>
+        </section>
+        <section class="vote">
+            <div class="cont_txt">
+                <p>Vote</p>
+                <p>If You Can, You Should</p>
+            </div>
+            <div class="cont_img">
+                <img src="img/vote.jpg">
+            </div>
+        </section>
+        <section class="tomford">
+            <div class="cont_txt">
+                <p>Tom Ford</p>
+            </div>
+            <div class="cont_img">
+                <img src="img/TomFord.gif">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="col_1">
+            <p>61 Greenpoint Ave, Suite #306</p>
+            <p>Brooklyn, NY 11222</p>
+            <p>212 228 3328</p>
+            <p>hello@dothingsnyc.com</p>
+        </div>
+        <div class="col_2">
+            <p>Instagram</p>
+            <p>Linkedin</p>
+            <p>©Dothings 2019</p>
+        </div>
+    </footer>
+</body>
+</html>
